@@ -1,0 +1,180 @@
+.about-header {
+    background-image: url('../../../assets/img/about/banner.png');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-header h1, p {
+    color: white;
+}
+
+.about {
+    display: flex;
+}
+
+.about-img{
+    width: 80%;
+}
+
+.about-img img {
+    width: 100%;
+}
+
+.about-text {
+    width: 80%;
+    padding: 40px 0px 10px 35px;
+}
+
+.about-text p {
+    color: #465b52;
+}
+
+.animate {
+    background-color: #ccc;
+}
+
+.slide {
+    animation-duration: 6s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    font-size: 12px;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 100%;
+    }
+
+    to {
+        margin-right: 0%;
+        width: 100%;
+    }
+}
+
+.download {
+    padding-top: 40px;
+    text-align: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.video {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.video video {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.features{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 40px;
+}
+
+.features-box{
+    border: 1px solid #cce7d0;
+    width: 180px;
+    text-align: center;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    padding: 25px 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+.features-box:hover{
+    box-shadow: 10px 10px 54px rgba(70, 62, 221, 0.1);
+}
+
+.features-box img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.features-box h6{
+    /* display: inline-block;
+    line-height: 1; */
+    color: #088178;
+    background-color: #fddde4;
+    padding: 10px 15px;
+}
+
+.features-box:nth-child(2) h6{
+    background-color: #cdebbc;
+}
+
+.features-box:nth-child(3) h6{
+    background-color: #d1e8f2;
+}
+
+.features-box:nth-child(4) h6{
+    background-color: #cdd4f8;
+}
+
+.features-box:nth-child(5) h6{
+    background-color: #f6dbf6;
+}
+
+.features-box:nth-child(6) h6{
+    background-color: #fff2e5;
+}
+
+@media (max-width: 799px) {
+    
+    .section-p1 {
+        padding: 40px 25px 40px 25px;
+    }
+
+    .about-img img {
+        padding-top: 100px;
+        margin-top: 100px;
+    }
+
+}
+
+@media (max-width: 477px) {
+    .about {
+        display: block;
+    }
+
+    .about-img {
+        width: 100%;
+    }
+
+    .about-text {
+        padding: 0px;
+        margin: 0 auto;
+    }
+
+    .about-text h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .about-text p {
+        text-align: justify;
+        font-size: 14px;
+    }
+
+    .about-img img {
+        padding-top: 0px;
+        margin-top: 0px;
+        width: 100%;
+    }
+
+    .features-box {
+        width: 130px;
+    }
+}

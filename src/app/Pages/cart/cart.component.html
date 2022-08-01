@@ -1,0 +1,80 @@
+<section class="cart-header">
+    <h1>#cart</h1>
+    <p>Add your coupon code & SAVE upto 70%</p>
+</section>
+
+
+
+    <section *ngIf="products.length !=0">
+
+        <section id="cart" class="section-p1">
+
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <td>Remove</td>
+                        <td>Image</td>
+                        <td>Product</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Subtotal</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let featuredProducts of products">
+                        <tr>
+                            <td><i class="bi bi-x-circle" (click)="removeItem(featuredProducts)"></i></td>
+                            <td><img src="{{featuredProducts.image}}" alt=""></td>
+                            <td>{{featuredProducts.name}}</td>
+                            <td>${{featuredProducts.price}}</td>
+                            <!-- <div *ngFor="let number of number">
+                                <input type="number" [(ngModel)]="number.number" (ngModelChange)="notifyMe(number.number,number.price)">
+                                <p>{{number.number * number.price}</p>
+                            </div> -->
+                            <td><input type="number" name="" id="" [(ngModel)]="featuredProducts.quantity" (ngModelChange)="notifyMe()"></td> 
+                            <td>$ {{featuredProducts.price * featuredProducts.quantity}} </td>
+                        </tr>
+                        <!-- <button (click)="showQuantity(quantity)">quantity</button> -->
+                    </ng-container>
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="cart-add" class="section-p1">
+            <div id="coupon">
+                <h3>Apply Coupon</h3>
+                <div>
+                    <input type="text" name="" id="" placeholder="Enter Your Coupon">
+                    <button class="normal">Apply</button>
+                </div>
+            </div>
+            <div id="subtotal">
+                <h3>Cart Total</h3>
+                <table>
+                    <tr>
+                        <td>Shipping</td>
+                        <td>Free</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td><strong>${{total}}</strong></td>
+                    </tr>
+                </table>
+    
+                <button class="normal">Proceed to checkout</button>
+            </div>
+        <!-- </ng-container> -->
+        <!-- </ng-container> -->
+        </section>
+
+    </section>
+
+
+<ng-container *ngIf="products.length === 0">
+   <section class="section-p1 margin-ml">
+    <div class="empty">
+        <h2>YOUR CART IS EMPTY</h2>
+        <button class="white"><a routerLink="/Shop">SHOP NOW</a></button>
+    </div>
+   </section>
+</ng-container>

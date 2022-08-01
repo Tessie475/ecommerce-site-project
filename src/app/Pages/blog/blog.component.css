@@ -1,0 +1,109 @@
+.blog-header {
+    background-image: url('../../../assets/img/banner/b19.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blog-header h1, p{
+    color: white;
+}
+
+ .section-p1 {
+    padding: 40px 80px 10px 80px;
+}
+
+.blog-details {
+    display: flex;
+    position: relative;
+    height: min-content;
+}
+
+.blog-img {
+    width: 50%;
+    height: fit-content;
+}
+
+.blog-img img {
+    width: 90%;
+    height: 300px;
+}
+
+.blog-text {
+    width: 70%;
+    height: 40%;
+    padding: 80px 20px 20px 0px;
+}
+
+
+
+.blog-text p {
+    color: #465b52;
+}
+
+.more {
+    display: flex;
+    align-items: center;
+}
+
+.more a{
+    color: #465b52;
+    text-decoration: none;
+}
+
+.more h6:hover {
+    color: #088178;
+}
+
+ .line {
+    width: 60px;
+    height: 2px;
+    display:inline-block;
+    background-color: #465b52;
+    margin-left: 8px;
+}
+
+.line:hover {
+    background-color: #088178;
+}
+
+.date h1{
+    position: absolute;
+    color: #c9cbce;
+    left: 0;
+    font-weight: 700;
+    font-size: 80px;
+    z-index: -5;
+
+}    
+
+@media (max-width: 477px) {
+    .section-p1 {
+        padding: 40px 20px 10px 20px;
+    }
+
+    .date h1 {
+        font-size: 40px;
+    }
+
+    .blog-img img {
+        height: 200px;
+    }
+
+    .blog-text {
+        padding-top: 10px;
+    }
+    
+    .blog-text p {
+        font-size: 12px;
+    }
+
+    .more h6 {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,31 @@
+<section class="featured-products section-p1" >
+    <h2>Featured Products</h2>
+    <p>Summer Collection New Modern Design</p>
+    <div class="pro-con">
+    <ng-container *ngFor="let featuredProducts of featured">
+
+            <div class="products">
+        <img src="{{featuredProducts.image}}" alt="">
+                <div class="pro-des">
+                <span>{{ featuredProducts.brandName}}</span>
+                <h5>{{featuredProducts.name}}</h5>
+                <div class="star">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                </div>
+            </div>
+                   <div class="cart-price">
+                    <h4>${{ featuredProducts.price}}</h4>
+                    <div class="cart">
+                        <i class="bi bi-cart4" (click)="addToCart(featuredProducts)"></i>
+                    </div>
+                   </div>
+            </div>
+
+</ng-container>
+</div>
+</section>
+

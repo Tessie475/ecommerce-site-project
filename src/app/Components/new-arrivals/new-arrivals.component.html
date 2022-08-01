@@ -1,0 +1,31 @@
+<section class="featured-products section-p1">
+    <h2>New Arrivals</h2>
+<p>Summer Collection New Modern Design</p>
+<div class="pro-con">
+<ng-container *ngFor ="let arrivals of products">
+    <div class="products">
+
+        <img src="{{ arrivals.image }}" alt="">
+        <div class="pro-des">
+        <span>{{arrivals.brandName}}</span>
+        <h5>{{arrivals.name}}</h5>
+        <div class="star">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+        </div>
+    </div>
+           <div class="cart-price">
+            <h4>${{arrivals.price}}</h4>
+            <div class="cart">
+                <i class="bi bi-cart4" (click)="addToCart(arrivals)"></i>
+            </div>
+           </div>
+    </div>
+</ng-container>
+   
+</div>
+
+</section>

@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ecommerce-project';
+  title = 'ecommerce-site-project';
+
+  showNav:boolean = false;
+  crossIcon:boolean =false;
+
+  displayNav(){
+    this.showNav=!this.showNav;
+    this.crossIcon =! this.crossIcon
+  }
+  
 }

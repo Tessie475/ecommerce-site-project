@@ -1,0 +1,179 @@
+.header {
+    background-image: url('../../../assets/img/about/banner.png');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header h1, p {
+    color: white;
+}
+
+.location {
+    display: flex;
+}
+
+
+
+.location p {
+    color: #465b52;
+}
+
+.locale h2 {
+    padding-bottom: 15px;
+    font-size: 35px;
+}
+
+.locale h4 {
+    padding-bottom: 5px;
+}
+
+.locale li {
+    list-style-type: none;
+}
+
+.locale i {
+    padding-right: 15px;
+}
+
+.map {
+    width: 55%;
+    height: 400px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.form-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    border: 1px solid #e1e1e1;
+}
+
+.form-details h4 {
+    padding-bottom: 10px;
+}
+
+.form-details form {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-details form input,
+.form-details form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border: 1px solid #e1e1e1;
+}
+
+.form-details form p {
+    color: #465b52;
+}
+
+.form-details form button {
+    background-color: #088178;
+    color: white;
+}
+
+.form-details .people div {
+    padding-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.form-details .people div img {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.form-details .people div p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 25px;
+    color: #465b52;
+}
+
+.form-details .people div p span {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+
+@media (max-width: 799px) {
+    .section-p1 {
+        padding: 40px 40px 40px 40px;
+    }
+
+    .locale {
+        width: 70%;
+    }
+
+    .locale h2 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .people div {
+        margin-left: 20px;
+
+    }
+
+    .first-div {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 477px) {
+    .location {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .locale {
+        width: 100%;
+    }
+
+    .map {
+        width: 100%;
+    }
+
+    .form-details {
+        display: block;
+        padding: 10px 10px 20px 10px;
+    }
+
+    .form-details form {
+        width: 100%;
+    }
+
+    .form-details form p {
+        margin: 0 auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .form-details h4 {
+        padding-bottom: 10px;
+       margin: 0 auto;
+    }
+
+    .form-details form button {
+        margin: 0 auto;
+    }
+}
