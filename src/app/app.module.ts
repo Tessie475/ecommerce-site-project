@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {  FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeroSectionComponent } from './Components/hero-section/hero-section.component'
 import { FeaturedProductsComponent } from './Components/featured-products/featured-products.component';
 import { NewArrivalsComponent } from './Components/new-arrivals/new-arrivals.component';
 import { NewsletterComponent } from './Components/newsletter/newsletter.component';
@@ -16,6 +18,7 @@ import { ShopComponent } from './Pages/shop/shop.component';
 @NgModule({
   declarations: [
     AppComponent,
+    HeroSectionComponent,
     FeaturedProductsComponent,
     NewArrivalsComponent,
     NewsletterComponent,
@@ -28,7 +31,8 @@ import { ShopComponent } from './Pages/shop/shop.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
