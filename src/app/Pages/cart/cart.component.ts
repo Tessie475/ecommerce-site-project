@@ -41,6 +41,8 @@ finalTotal !: number
   emptyCart(){
     console.log('clicked')
     this.cartService.removeAllItems()
+    this.products = this.cartService.cartItemList
+    console.log(this.cartService.cartItemList)
   }
 
 }
