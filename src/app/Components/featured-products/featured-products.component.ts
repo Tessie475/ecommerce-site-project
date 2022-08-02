@@ -18,5 +18,6 @@ export class FeaturedProductsComponent implements OnInit {
 
 addToCart(featuredProducts: any){
 this.cartService.addItems(featuredProducts)
+alert('an item has been added to cart')
 }
 }

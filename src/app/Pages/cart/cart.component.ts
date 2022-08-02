@@ -9,7 +9,12 @@ import { CartService } from 'src/app/Services/cart.service';
 export class CartComponent implements OnInit {
   featured!:any
 products: any = []
-total: number = 0
+// total: number = 0
+total !: number
+quantity:number =0
+price:number = 0
+finalTotal !: number
+
 
   constructor( private cartService: CartService){}
 
@@ -17,19 +22,24 @@ total: number = 0
 
   ngOnInit(): void {
     this.products = this.cartService.cartItemList
+    this.total = this.cartService.getTotalPrice()
   }
-
 
   notifyMe(){
     this.cartService.cartItemList.reduce((total:any, object:any) =>{
       this.total = total + (object.price * object.quantity)
-      console.log(this.total)
       return this.total
     }, 0)
   }
 
   removeItem(featuredProducts: any){
     this.cartService.removeCartItem(featuredProducts)
+    alert('this item has been removed from cart')
+  }
+
+  emptyCart(){
+    console.log('clicked')
+    this.cartService.removeAllItems()
   }
 
 }
