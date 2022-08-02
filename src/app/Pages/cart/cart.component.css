@@ -162,4 +162,7 @@
         width: 100%;
         padding: 20px;
     }
+    .empty h2 {
+        text-align: center;
+    }
 }

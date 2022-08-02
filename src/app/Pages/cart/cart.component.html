@@ -27,14 +27,9 @@
                             <td><img src="{{featuredProducts.image}}" alt=""></td>
                             <td>{{featuredProducts.name}}</td>
                             <td>${{featuredProducts.price}}</td>
-                            <!-- <div *ngFor="let number of number">
-                                <input type="number" [(ngModel)]="number.number" (ngModelChange)="notifyMe(number.number,number.price)">
-                                <p>{{number.number * number.price}</p>
-                            </div> -->
                             <td><input type="number" name="" id=""  [(ngModel)]="featuredProducts.quantity" (ngModelChange)="notifyMe()"></td> 
                             <td>$ {{featuredProducts.price * featuredProducts.quantity}} </td>
                         </tr>
-                        <!-- <button (click)="showQuantity(quantity)">quantity</button> -->
                     </ng-container>
                 </tbody>
             </table>
@@ -63,8 +58,6 @@
     
                 <button class="normal" (click)="emptyCart()">Proceed to checkout</button>
             </div>
-        <!-- </ng-container> -->
-        <!-- </ng-container> -->
         </section>
 
     </section>

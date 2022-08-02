@@ -34,6 +34,7 @@ export class CartService {
 
   removeAllItems(){
     this.cartItemList = []
+    console.log(this.cartItemList)
   }
   
 }
