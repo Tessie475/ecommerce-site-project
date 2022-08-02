@@ -32,6 +32,8 @@ finalTotal !: number
 
   removeItem(featuredProducts: any){
     this.cartService.removeCartItem(featuredProducts)
+    alert("an item has been removed")
+    this.notifyMe()
   }
 
   emptyCart(){
