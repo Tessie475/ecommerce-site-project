@@ -17,13 +17,6 @@ export class CartService {
     }
     this.featured.push(this.cartItemList)
     this.getTotalPrice()
-    this.notifyMe()
-  }
-  notifyMe(){
-    this.cartItemList.reduce((total:any, object:any) =>{
-      this.total = total + (object.price * object.quantity)
-      return this.total
-    }, 0)
   }
 
   getTotalPrice(){
