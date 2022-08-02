@@ -31,7 +31,7 @@ finalTotal !: number
 
   removeItem(featuredProducts: any){
     this.cartService.removeCartItem(featuredProducts)
-    this.total = this.cartService.getTotalPrice()
+    this.notifyMe()
     alert('this item has been removed from cart')
   }
 
