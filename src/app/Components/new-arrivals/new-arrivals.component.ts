@@ -16,6 +16,7 @@ products: any = []
   }
 addToCart(arrivals: any){
   this.cartService.addItems(arrivals)
+  alert("an item has been added to cart")
 }
 
 }

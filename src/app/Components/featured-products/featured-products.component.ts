@@ -9,7 +9,7 @@ import { ProductsService } from 'src/app/Services/products.service';
 })
 export class FeaturedProductsComponent implements OnInit {
   featured: any = []
-  constructor(private productsService: ProductsService, private cartService: CartService ) { }
+  constructor(private productsService: ProductsService, private cartService: CartService) { }
 
   
   ngOnInit(): void {

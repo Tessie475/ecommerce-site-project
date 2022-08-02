@@ -20,6 +20,7 @@ finalTotal !: number
   ngOnInit(): void {
     this.products = this.cartService.cartItemList
     this.total = this.cartService.getTotalPrice()
+    this.notifyMe()
   }
 
   notifyMe(){

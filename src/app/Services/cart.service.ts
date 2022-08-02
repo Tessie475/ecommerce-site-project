@@ -6,14 +6,24 @@ import { Injectable } from '@angular/core';
 export class CartService {
   cartItemList: any = []
   featured: any = []
+  total !: number
 
 
   constructor() { }
 
   addItems (product:any){
+    if (!this.cartItemList.includes(product)) {
     this.cartItemList.push(product)
+    }
     this.featured.push(this.cartItemList)
     this.getTotalPrice()
+    this.notifyMe()
+  }
+  notifyMe(){
+    this.cartItemList.reduce((total:any, object:any) =>{
+      this.total = total + (object.price * object.quantity)
+      return this.total
+    }, 0)
   }
 
   getTotalPrice(){
